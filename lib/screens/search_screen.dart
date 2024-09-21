@@ -13,6 +13,7 @@ class _SearchScreenState extends State<SearchScreen> {
   final WeatherService _weatherService = WeatherService();
   Weather? _weather;
 
+  // Method to search weather data for a city
   void _searchWeather() async {
     try {
       final weather = await _weatherService.getWeather(_controller.text);
