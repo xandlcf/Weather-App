@@ -7,13 +7,14 @@ class WeatherCard extends StatelessWidget {
 
   WeatherCard({required this.weather, this.onDelete});
 
+  // Method to get background color based on weather description
   Color getBackgroundColor(String description) {
     if (description.contains('cloud')) {
-      return Colors.grey[300]!; // Cinza claro para nublado
+      return Colors.grey[300]!; // Light grey for cloudy
     } else if (description.contains('clear')) {
-      return Colors.orange[200]!; // Laranja claro para ensolarado
+      return Colors.orange[200]!; // Light orange for clear
     } else {
-      return Colors.blue[200]!; // Azul claro para neutro
+      return Colors.blue[200]!; // Light blue for neutral
     }
   }
 
