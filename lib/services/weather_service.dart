@@ -6,6 +6,7 @@ import 'package:myapp/utils/api_keys.dart';
 class WeatherService {
   final String apiKey = ApiKeys.openWeatherMapApiKey;
 
+  // Method to get weather data for a city
   Future<Weather> getWeather(String cityName) async {
     final response = await http.get(Uri.parse(
         'https://api.openweathermap.org/data/2.5/weather?q=$cityName&appid=$apiKey&units=metric'));
