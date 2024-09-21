@@ -19,6 +19,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     _loadFavorites();
   }
 
+  // Method to load favorites from shared preferences
   void _loadFavorites() async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -30,6 +31,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     }
   }
 
+  // Method to add a favorite city
   void _addFavorite(String city) async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -42,6 +44,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     }
   }
 
+  // Method to remove a favorite city
   void _removeFavorite(String city) async {
     try {
       final prefs = await SharedPreferences.getInstance();
@@ -54,6 +57,7 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
     }
   }
 
+  // Method to get weather data for a city
   Future<Weather> _getWeather(String city) async {
     try {
       return await _weatherService.getWeather(city);
