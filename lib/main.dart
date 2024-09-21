@@ -5,6 +5,7 @@ void main() {
   runApp(MyApp());
 }
 
+// Main application widget
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Weather App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        scaffoldBackgroundColor: Colors.white, // Fundo branco
+        scaffoldBackgroundColor: Colors.white, // White background
       ),
       home: HomeScreen(),
     );
