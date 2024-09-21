@@ -11,6 +11,7 @@ class Weather {
     required this.icon,
   });
 
+  // Factory constructor to create a Weather object from JSON
   factory Weather.fromJson(Map<String, dynamic> json) {
     return Weather(
       cityName: json['name'],
